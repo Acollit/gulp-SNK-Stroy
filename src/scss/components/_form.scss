@@ -1,0 +1,240 @@
+.form {
+  margin-bottom: 100px;
+
+  &__content {
+    display: flex;
+    gap: 4px;
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    max-width: 560px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 100%;
+    color: var(--dark);
+
+    span {
+      color: var(--red);
+    }
+
+    @include small-tablet {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__inner {
+    max-width: 868px;
+    width: 100%;
+  }
+
+  &__text {
+    max-width: 830px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 14px;
+      margin-bottom: 43px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 100px;
+    border-radius: 10px;
+    background: var(--white);
+    padding: 65px 36px;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 42px;
+      padding: 20px;
+    }
+
+    @include mobile {
+      gap: 29px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 217px;
+      height: 237px;
+      left: 6px;
+      top: -18px;
+      background-image: url(../img/form-bg-3.webp);
+      background-size: cover;
+
+      @include mobile {
+        width: 146px;
+        height: 159px;
+        top: -10px;
+        left: -23px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__btn {
+    max-width: 225px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 100px;
+    background: var(--red);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: #6e3433;
+    }
+
+    @include small-tablet {
+      max-width: 170px;
+    }
+  }
+
+  &__box {
+    position: relative;
+    border-radius: 10px;
+    background: radial-gradient(75.88% 74.96% at 65.63% 30.68%, #222 0%, #2f2f2f 84.72%, #404040 100%);
+    padding: 36px;
+    max-width: 432px;
+    width: 100%;
+
+    @include small-tablet {
+      max-width: 700px;
+      height: 440px;
+      padding: 20px;
+    }
+
+    @include mobile {
+      height: 284px;
+    }
+
+    .form__subtitle {
+      color: var(--white);
+      margin-bottom: 28px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 444px;
+      height: 156px;
+      left: -29px;
+      bottom: -24px;
+      background-image: url(../img/form-bg-2.webp);
+      background-size: cover;
+
+      @include mobile {
+        width: 290px;
+        height: 102px;
+        left: -25px;
+        bottom: -12px;
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    padding: 15px;
+    border: 1.50px dashed var(--white);
+    border-radius: 150px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--white);
+  }
+
+  &__file {
+    display: none;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__btn-two {
+    max-width: 187px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 100px;
+    background: var(--red);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: #6e3433;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 169px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 100px;
+    background: #29a71a;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #175c0f;
+    }
+
+    @include mobile {
+      font-size: 0px;
+      max-width: 120px;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.steps {
+  margin-bottom: 100px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 100%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    position: relative;
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__item {
+    padding: 24px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--white);
+    border-radius: 10px;
+
+    &:last-child {
+      justify-content: flex-end;
+      background-color: #29a71a;
+      background-image: url(../img/steps-bg.webp);
+      background-position: right bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include small-tablet {
+        height: 140px;
+        background-position: right bottom -30px;
+      }
+    }
+
+    @include small-tablet {
+      height: 120px;
+      padding: 20px;
+    }
+
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+    color: var(--white);
+
+    @include small-tablet {
+      font-size: 24px;
+    }
+  }
+
+
+
+}

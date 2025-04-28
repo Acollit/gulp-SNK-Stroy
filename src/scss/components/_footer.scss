@@ -1,0 +1,174 @@
+.footer {
+  padding-bottom: 50px;
+
+  @include small-tablet {
+    padding-bottom: 0px;
+  }
+
+  .section-container {
+    background: var(--dark);
+    border-radius: 20px;
+
+    @include small-tablet {
+      border-radius: 25px 25px 0 0;
+      padding: 0;
+    }
+  }
+
+  &__gotop {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 150px;
+    bottom: 150px;
+    transition: all .3s ease-in-out;
+    opacity: 1;
+    z-index: 5;
+
+    @include small-tablet {
+      width: 40px;
+      height: 40px;
+      right: 30px;
+      bottom: 30px;
+      z-index: 5;
+    }
+  }
+
+  &__content {
+    padding: 100px 0;
+    display: flex;
+    gap: 240px;
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 40px;
+      padding: 70px 0;
+    }
+  }
+
+  &__contacts {
+    @include small-tablet {
+      display: none;
+    }
+
+    &--two {
+      display: none;
+
+      @include small-tablet {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 120px;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 100px;
+
+    @include small-tablet {
+      margin-bottom: 0px;
+    }
+  }
+
+
+  &__logo-text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--white);
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 8px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 110%;
+    color: var(--white);
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+  }
+
+  &__mail {
+    display: block;
+    margin-bottom: 32px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 110%;
+    color: #909090;
+
+    @include small-tablet {
+      margin: 0;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--white);
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include small-tablet {
+      gap: 8px;
+    }
+  }
+
+  &__item {
+    @include small-tablet {
+      &:nth-child(3) {
+        order: -1;
+      }
+
+      &:nth-child(2) {
+        order: 2;
+      }
+    }
+  }
+
+  &__link {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #909090;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+}

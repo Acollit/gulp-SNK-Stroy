@@ -1,0 +1,219 @@
+.hero {
+  margin-bottom: 100px;
+
+  @include small-tablet {
+    margin-bottom: 70px
+  }
+
+  .section-container {
+    @include small-tablet {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    border-radius: 20px;
+    background: var(--white);
+    padding: 4px;
+    padding-top: 50px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 30px;
+      top: 190px;
+      width: 250px;
+      height: 145px;
+      background-image: url(../img/hero-content-1.webp);
+      background-size: cover;
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__descr {
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8;
+    padding: 9px 16px;
+    border-radius: 100px;
+    background: var(--yellow);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--dark);
+
+    @include mobile {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 36px;
+    max-width: 1090px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--dark);
+
+    span {
+      color: var(--red);
+    }
+
+    @include mobile {
+      padding: 0 16px;
+      font-size: 28px;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    @include small-tablet {
+      padding: 0 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    max-width: 170px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 100px;
+    background: var(--red);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: #6e3433;
+    }
+
+    @include mobile {
+      max-width: 400px;
+    }
+  }
+
+  &__link {
+    max-width: 196px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 100px;
+    border: 1px solid var(--devider);
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: var(--dark);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: var(--dark);
+      border: 1px solid var(--dark);
+      color: #FFF;
+    }
+
+    @include mobile {
+      max-width: 400px;
+    }
+  }
+
+  &__wrapper {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url(../img/hero-bg.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -107px;
+      bottom: -135px;
+      width: 290px;
+      height: 275px;
+      background-image: url(../img/hero-content-2.webp);
+      background-size: cover;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      height: 350px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+    max-width: 1324px;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+
+    @include small-tablet {
+      display: none;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 20px;
+    }
+
+    &--two {
+      display: none;
+
+      @include small-tablet {
+        margin-top: 4px;
+        display: grid;
+      }
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: var(--white);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 12px;
+      padding: 10px;
+
+      svg {
+        min-width: 10px;
+      }
+    }
+  }
+
+}

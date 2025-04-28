@@ -1,0 +1,128 @@
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 260px;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  transition: all .3s ease-in-out;
+  z-index: 10;
+
+
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+
+    .menu__content {
+      transform: translateX(0%);
+    }
+
+  }
+
+  &__content {
+    padding: 30px 15px 10px 15px;
+    padding-top: 80px;
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+    background: #FFF;
+    max-width: 260px;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 60px;
+    overflow-y: scroll;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 24px;
+    background: radial-gradient(2419.50% 69.22% at 50.00% 52.13%, rgb(50, 148, 76) 0%, rgb(60, 179, 87) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    span {
+      background: radial-gradient(0.00% 128.93% at 89.73% 92.58%, rgb(0, 0, 0) 0%, rgb(57, 57, 57) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--dark);
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__phone {
+    display: block;
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    color: var(--dark);
+  }
+
+  &__btn {
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 100px;
+    padding: 13px 13px;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    align-items: center;
+    background: var(--red);
+
+
+  }
+
+  &__sublink {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--dark);
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    background-image: url(../img/close.svg);
+
+  }
+}

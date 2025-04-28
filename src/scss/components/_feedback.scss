@@ -1,0 +1,44 @@
+.feedback {
+
+  margin-bottom: 100px;
+
+  &__item {
+    border-radius: 20px;
+    padding: 24px;
+    background: var(--white);
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--dark);
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--dark);
+  }
+
+  &__date {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #717375;
+  }
+}

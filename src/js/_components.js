@@ -1,1 +1,8 @@
-console.log('components');
+import './components/swiper.js';
+import './components/tabs.js';
+import './components/filter.js';
+import './components/acardion.js';
+import './components/burger.js';
+import './components/modal.js';
+import './components/map.js';
+import './components/totop.js';

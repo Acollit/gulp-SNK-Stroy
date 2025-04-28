@@ -1,0 +1,108 @@
+.popular {
+  margin-bottom: 100px;
+
+  &__swiper {
+    .swiper-slide {
+      max-width: 323px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 100%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    max-width: 323px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    padding-bottom: 16px;
+
+    @include tablet {
+      max-width: 600px;
+    }
+
+    .popular__img {
+      height: 200px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+    padding: 0 20px;
+  }
+
+  &__name {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: var(--dark);
+
+  }
+
+  &__price {
+    padding: 0 20px;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    color: var(--dark);
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__link {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 3;
+    width: 16px;
+    height: 16px;
+  }
+
+
+
+  &__size {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--devider);
+    border-radius: 100px;
+    padding: 5px 7px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--dark);
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+  }
+}

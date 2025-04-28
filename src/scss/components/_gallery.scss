@@ -1,0 +1,126 @@
+.gallery {
+  margin-bottom: 100px;
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--dark);
+
+
+  }
+
+  &__box {
+    margin-bottom: 20px;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 36px;
+  }
+
+  &__grid {
+    margin-bottom: 40px;
+    max-width: 1214px;
+    display: grid;
+    gap: 10px;
+    row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+
+
+    img {
+      height: 220px;
+      border-radius: 20px;
+      max-width: 296px;
+      width: 100%;
+
+      @include mobile {
+        max-width: 400px;
+      }
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mini {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__swiper {
+
+
+    .swiper-slide {
+      max-width: 305px;
+
+      img {
+        height: 220px;
+        border-radius: 20px;
+
+      }
+
+      @include mobile {
+        max-width: 200px;
+      }
+    }
+  }
+
+  .tabs {
+
+    &__panel {
+      display: none;
+      position: relative;
+
+      &--active {
+        display: block;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--devider);
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    &__nav-btn {
+      position: relative;
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 20px;
+      color: #afafaf;
+
+      &--active {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--dark);
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          bottom: -13px;
+          background: radial-gradient(105.81% 105.81% at 49.33% 40.70%, rgb(214, 114, 85) 0%, rgb(134, 34, 30) 100%);
+        }
+      }
+    }
+  }
+}

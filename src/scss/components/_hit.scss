@@ -1,0 +1,391 @@
+.hit {
+  margin-bottom: 100px;
+
+
+  @include small-tablet {
+    margin-bottom: 70px;
+
+    .section-container {
+      padding: 0;
+    }
+  }
+
+
+  &__cont {
+    border-radius: 20px;
+    background: var(--white);
+    padding: 90px 100px;
+    overflow: hidden;
+
+    @include small-tablet {
+      padding: 60px 20px;
+    }
+
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 100%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid var(--devider);
+    border-radius: 10px;
+    margin-bottom: 4px;
+    overflow: hidden;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+
+  &__inner {
+    padding: 32px 36px;
+    width: 100%;
+
+    @include small-tablet {
+      padding: 25px 20px;
+      position: relative;
+      width: -webkit-fill-available;
+    }
+  }
+
+  &__slider {
+    display: block;
+    height: 300px;
+    max-width: 541px;
+    margin: 0;
+    position: relative;
+
+    @include small-tablet {
+      height: 260px;
+      width: 100%;
+
+      img {
+        height: 260px;
+      }
+    }
+
+  }
+
+  &__slider-prev {
+    position: absolute;
+    z-index: 5;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+
+  &__slider-next {
+    position: absolute;
+    z-index: 5;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+
+  &__pag {
+    position: absolute;
+
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+
+    @include small-tablet {
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__size {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 100px;
+    background: var(--yellow);
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--dark);
+  }
+
+  &__name {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 85px;
+    margin-bottom: 67px;
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 30px;
+      align-items: flex-start;
+    }
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--dark);
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--dark);
+  }
+
+  &__btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    max-width: 186px;
+    width: 100%;
+    padding: 16px;
+    background: var(--red);
+    border-radius: 100px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--white);
+    text-align: center;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: #6e3433;
+    }
+
+    @include small-tablet {
+      max-width: 500px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @include small-tablet {
+      position: absolute;
+      top: 17px;
+      right: 20px;
+    }
+  }
+
+  &__prev {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+  }
+
+  &__next {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+  }
+
+  &__thumbs {
+    .swiper-slide {
+      max-width: 214px;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background: var(--bg);
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    padding: 14px;
+    position: relative;
+  }
+
+  &__overlay-img {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+
+  &__overlay-name {
+    margin: 0;
+    margin-bottom: 19px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    color: var(--dark);
+  }
+
+  &__overlay-price {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--dark);
+
+  }
+
+  &__overlay-size {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 6px 7px 4px 7px;
+    border: 1px solid var(--devider);
+    border-radius: 100px;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--dark);
+
+    img {
+      min-width: 14px;
+    }
+
+  }
+
+  .swiper-button-disabled {
+    border-color: var(--devider);
+  }
+
+  .tabs {
+
+    &__panel {
+
+      display: none;
+
+      &--active {
+        display: block;
+      }
+    }
+
+    &__nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-bottom: 40px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 200%;
+        height: 1px;
+        background-color: var(--devider);
+        bottom: -12px;
+        left: -150px;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      @include small-tablet {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+    }
+
+    &__nav-btn {
+      position: relative;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--dark);
+
+      &--active {
+        color: var(--red);
+
+
+
+        &::before {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          width: 100%;
+          height: 1px;
+          bottom: -12px;
+          left: 0;
+          background: radial-gradient(105.81% 105.81% at 49.33% 40.70%, rgb(214, 114, 85) 0%, rgb(134, 34, 30) 100%);
+
+          @include mobile {
+            display: none;
+          }
+        }
+
+      }
+
+      @include small-tablet {
+        font-size: 14px;
+
+      }
+    }
+  }
+
+}

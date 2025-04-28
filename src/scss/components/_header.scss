@@ -1,1 +1,233 @@
-// ваш код
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  background: var(--white);
+  padding: 16px 0;
+  margin-bottom: 20px;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include small-tablet {
+      gap: 20px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__logo-text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 23px;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 20px;
+    }
+
+    span {
+      color: var(--red);
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border: 1px solid var(--devider);
+    border-radius: 100px;
+    padding: 8px 24px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__list-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--dark);
+
+    svg {
+      transition: all .3s ease-in-out;
+      transform: rotate(0deg);
+    }
+  }
+
+  &__sublist {
+    position: absolute;
+    z-index: 4;
+    visibility: hidden;
+    left: -5px;
+    top: 30px;
+    display: flex;
+    padding: 15px;
+    background-color: #FFF;
+    border-radius: 15px;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    width: 250px;
+  }
+
+  &__sublink {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--dark);
+    transition: all .3s ease-in-out;
+
+    svg {
+      transition: all .3s ease-in-out;
+      transform: rotate(0deg);
+    }
+
+  }
+
+  &__inner {
+    flex-direction: column;
+    display: flex;
+    overflow: hidden;
+
+
+    &:hover {
+      .header__sublink {
+        &:first-child {
+          margin-bottom: 10px;
+        }
+      }
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      .header__over {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        max-height: 48px;
+      }
+    }
+
+  }
+
+  &__over {
+    flex-direction: column;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    max-height: 0;
+
+  }
+
+  &__list-item {
+    position: relative;
+
+    &:hover {
+      .header__sublist {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .header__list-link {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 385px;
+
+    @include mobile {
+      justify-content: flex-end;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 12px;
+      background-color: var(--devider);
+      border-radius: 20px;
+      position: absolute;
+      right: -16px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__btn {
+    max-width: 133px;
+    width: 100%;
+    padding: 14px;
+    background: var(--red);
+    border-radius: 90px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: var(--white);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: #6e3433;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+      max-width: 86px;
+      padding: 8px;
+    }
+  }
+
+  .burger {
+    display: none;
+    @include burger;
+
+    @include small-tablet {
+      display: block;
+    }
+
+
+  }
+}

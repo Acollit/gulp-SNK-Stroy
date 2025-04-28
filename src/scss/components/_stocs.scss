@@ -1,0 +1,123 @@
+.stocs {
+  margin-bottom: 100px;
+
+  @include small-tablet {
+    margin-bottom: 70px;
+  }
+
+  &__content {
+    display: flex;
+    border-radius: 10px;
+    padding: 4px;
+    background: var(--white);
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include small-tablet {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+
+    @include small-tablet {
+      padding: 16px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 130%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    color: var(--dark);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__swiper {
+    max-width: 864px;
+    width: 100%;
+
+    .swiper-slide {}
+  }
+
+  &__prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -68px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__next {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -68px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__pag {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+
+    .swiper-pagination-bullet {
+      margin: 0 !important;
+      width: 10px !important;
+      height: 10px !important;
+      background-color: inherit !important;
+      border: 1px solid var(--devider);
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--red) !important;
+      border: 1px solid var(--red);
+    }
+  }
+}

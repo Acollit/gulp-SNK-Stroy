@@ -1,0 +1,35 @@
+.map {
+  margin-bottom: 100px;
+
+  @include small-tablet {
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 50px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 100%;
+    color: var(--dark);
+
+    @include small-tablet {
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+  }
+
+  &__content {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  &__map {
+    height: 700px;
+
+    @include small-tablet {
+      height: 600px;
+    }
+  }
+}

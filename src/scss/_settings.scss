@@ -16,6 +16,7 @@
   min-width: 360px;
   min-height: 100%;
   font-size: 16px;
+  background-color: var(--bg);
 }
 
 img {
@@ -28,12 +29,11 @@ a {
   text-decoration: none;
 }
 
-.site-container {
-  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
-}
+.site-container {}
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -97,4 +97,11 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.section-container {
+  max-width: 1534px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
