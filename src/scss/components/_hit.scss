@@ -70,6 +70,10 @@
     margin: 0;
     position: relative;
 
+    img {
+      height: 300px;
+    }
+
     @include small-tablet {
       height: 260px;
       width: 100%;
@@ -249,6 +253,11 @@
     }
   }
 
+  &__thumb-img {
+    height: 120px;
+    border-radius: 10px;
+  }
+
   &__item {
     position: relative;
     background: var(--bg);
@@ -264,6 +273,8 @@
 
   &__overlay-img {
     position: absolute;
+    width: 16px;
+   height: 16px;
     right: 16px;
     top: 16px;
   }

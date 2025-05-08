@@ -26,6 +26,9 @@
       margin-bottom: 36px;
     }
 
+    @include mobile {
+      margin-bottom: 20px;
+    }
 
   }
 
@@ -38,6 +41,13 @@
     gap: 10px;
     max-width: 275px;
     width: 100%;
+
+    @include mobile {
+      position: static;
+      margin-bottom: 24px;
+      max-width: 500px;
+      width: 100%;
+    }
   }
 
   &__key {
@@ -54,6 +64,10 @@
     &--active {
       border: 1.50px solid var(--red);
     }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__ysad {
@@ -68,6 +82,10 @@
 
     &--active {
       border: 1.50px solid var(--red);
+    }
+
+    @include mobile {
+      width: 100%;
     }
   }
 

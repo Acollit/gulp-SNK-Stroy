@@ -4,8 +4,8 @@ if (document.querySelector('.catalog__filter')) {
   let sizeRange = { min: 0, max: 0, min2: null, max2: null };
   let floorFilter = '';
   let priceRange = {
-    min_price: 400000,
-    max_price: 2000000
+    min_price: 300000,
+    max_price: 4000000
   };
 
   // Инициализация слайдера цены
@@ -129,13 +129,13 @@ if (document.querySelector('.catalog__filter')) {
           <div class="catalog__info">
             <span class="catalog__name">${product.name}</span>
             <div class="catalog__size">
-              <img loading="lazy" src="http://deepirmail.temp.swtest.ru/wp-content/themes/CHK/assets/img/catalog-size.svg" class="catalog__size-img image" width="18" height="18" alt="svg">
+              <img loading="lazy" src="https://snk-stroy.ru/wp-content/themes/CHK/assets/img/catalog-size.svg" class="catalog__size-img image" width="18" height="18" alt="svg">
               ${product.size || ''}
             </div>
           </div>
           <span class="catalog__price">${formatPrice(product.price)} ₽</span>
           <div  class="catalog__link">
-            <img loading="lazy" src="http://deepirmail.temp.swtest.ru/wp-content/themes/CHK/assets/img/catalog-link.svg" class="catalog__link-img image" width="28" height="28" alt="Ссылка">
+            <img loading="lazy" src="https://snk-stroy.ru/wp-content/themes/CHK/assets/img/catalog-link.svg" class="catalog__link-img image" width="28" height="28" alt="Ссылка">
           </div>
         `;
         productsContainer.appendChild(productItem);

@@ -41,6 +41,7 @@ document.querySelectorAll('.tabs__panel').forEach((panel) => {
       new Swiper(sliderEl, {
         slidesPerView: 1,
         spaceBetween: 10,
+        simulateTouch: false,
         navigation: {
           prevEl: sliderPrev,
           nextEl: sliderNext,
@@ -82,6 +83,7 @@ const ProjectInnerThumbs = new Swiper('.project-inner__thumbs', {
 const ProjectInnerSwiper = new Swiper('.project-inner__swiper', {
   slidesPerView: 1,
   spaceBetween: 10,
+  autoHeight: true,
   navigation: {
     prevEl: '.project-inner__prev',
     nextEl: '.project-inner__next',

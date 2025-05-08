@@ -6,3 +6,4 @@ import './components/burger.js';
 import './components/modal.js';
 import './components/map.js';
 import './components/totop.js';
+import './components/validate.js';
